@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">
+    Distributed Partitioning in PostgreSQL
+  </text>
+  
+  <!-- PgPool -->
+  <rect x="350" y="60" width="100" height="40" rx="5" fill="#2196F3"/>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">PgPool</text>
+  
+  <!-- Server 1 -->
+  <rect x="100" y="150" width="180" height="200" rx="5" fill="#4CAF50"/>
+  <text x="190" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#fff">Server 1</text>
+  
+  <rect x="110" y="190" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="190" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">messages_tenant_1_100</text>
+  
+  <rect x="110" y="230" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="190" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">users_0, users_1</text>
+  
+  <!-- Server 2 -->
+  <rect x="310" y="150" width="180" height="200" rx="5" fill="#FFC107"/>
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#fff">Server 2</text>
+  
+  <rect x="320" y="190" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">messages_tenant_101_200</text>
+  
+  <rect x="320" y="230" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">users_2, users_3</text>
+  
+  <!-- Server 3 -->
+  <rect x="520" y="150" width="180" height="200" rx="5" fill="#FF5722"/>
+  <text x="610" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#fff">Server 3</text>
+  
+  <rect x="530" y="190" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="610" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">messages_tenant_201_300</text>
+  
+  <rect x="530" y="230" width="160" height="30" rx="5" fill="#fff"/>
+  <text x="610" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">users_4, users_5</text>
+  
+  <!-- Connections -->
+  <line x1="400" y1="100" x2="400" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="100" x2="190" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="100" x2="610" y2="150" stroke="#333" stroke-width="2"/>
+  
+  <!-- Explanation Text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Implementation Steps:</text>
+  <text x="20" y="410" font-family="Arial, sans-serif" font-size="14" fill="#333">1. Create foreign tables on each server to represent remote partitions</text>
+  <text x="20" y="440" font-family="Arial, sans-serif" font-size="14" fill="#333">2. Use postgres_fdw extension to create foreign data wrappers</text>
+  <text x="20" y="470" font-family="Arial, sans-serif" font-size="14" fill="#333">3. Create a parent table that combines local and foreign partitions</text>
+  <text x="20" y="500" font-family="Arial, sans-serif" font-size="14" fill="#333">4. Configure PgPool to route queries to appropriate servers</text>
+  <text x="20" y="530" font-family="Arial, sans-serif" font-size="14" fill="#333">5. Implement a mechanism to create new partitions as needed</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <style>
+    .title { font: bold 24px sans-serif; }
+    .subtitle { font: bold 18px sans-serif; }
+    .text { font: 14px sans-serif; }
+    .disk { fill: #b0c4de; stroke: #4682b4; stroke-width: 2; }
+    .arrow { stroke: #000; stroke-width: 2; fill: none; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">RAID Levels: 0 to 10</text>
+  
+  <!-- RAID 0 -->
+  <g transform="translate(50, 80)">
+    <text x="0" y="0" class="subtitle">RAID 0 (Striping)</text>
+    <rect x="0" y="20" width="50" height="80" class="disk" />
+    <rect x="60" y="20" width="50" height="80" class="disk" />
+    <text x="55" y="120" text-anchor="middle" class="text">High Performance</text>
+    <text x="55" y="140" text-anchor="middle" class="text">No Redundancy</text>
+  </g>
+  
+  <!-- RAID 1 -->
+  <g transform="translate(220, 80)">
+    <text x="0" y="0" class="subtitle">RAID 1 (Mirroring)</text>
+    <rect x="0" y="20" width="50" height="80" class="disk" />
+    <rect x="60" y="20" width="50" height="80" class="disk" />
+    <path d="M 25 10 L 85 10" class="arrow" marker-end="url(#arrowhead)" />
+    <text x="55" y="120" text-anchor="middle" class="text">Full Redundancy</text>
+    <text x="55" y="140" text-anchor="middle" class="text">Reduced Capacity</text>
+  </g>
+  
+  <!-- RAID 5 -->
+  <g transform="translate(390, 80)">
+    <text x="0" y="0" class="subtitle">RAID 5 (Striping with Parity)</text>
+    <rect x="0" y="20" width="40" height="80" class="disk" />
+    <rect x="50" y="20" width="40" height="80" class="disk" />
+    <rect x="100" y="20" width="40" height="80" class="disk" />
+    <text x="70" y="120" text-anchor="middle" class="text">Good Balance</text>
+    <text x="70" y="140" text-anchor="middle" class="text">1 Disk Redundancy</text>
+  </g>
+  
+  <!-- RAID 6 -->
+  <g transform="translate(90, 250)">
+    <text x="0" y="0" class="subtitle">RAID 6 (Double Parity)</text>
+    <rect x="0" y="20" width="35" height="80" class="disk" />
+    <rect x="45" y="20" width="35" height="80" class="disk" />
+    <rect x="90" y="20" width="35" height="80" class="disk" />
+    <rect x="135" y="20" width="35" height="80" class="disk" />
+    <text x="85" y="120" text-anchor="middle" class="text">Higher Redundancy</text>
+    <text x="85" y="140" text-anchor="middle" class="text">2 Disk Fault Tolerance</text>
+  </g>
+  
+  <!-- RAID 10 -->
+  <g transform="translate(350, 250)">
+    <text x="0" y="0" class="subtitle">RAID 10 (1+0: Striped Mirrors)</text>
+    <rect x="0" y="20" width="40" height="80" class="disk" />
+    <rect x="50" y="20" width="40" height="80" class="disk" />
+    <rect x="150" y="20" width="40" height="80" class="disk" />
+    <rect x="200" y="20" width="40" height="80" class="disk" />
+    <path d="M 20 10 L 70 10" class="arrow" marker-end="url(#arrowhead)" />
+    <path d="M 170 10 L 220 10" class="arrow" marker-end="url(#arrowhead)" />
+    <text x="120" y="120" text-anchor="middle" class="text">High Performance + Redundancy</text>
+    <text x="120" y="140" text-anchor="middle" class="text">50% Capacity Utilization</text>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+</svg>
